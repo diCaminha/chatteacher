@@ -1,0 +1,7 @@
+numpy
+openai
+python-dotenv
+tiktoken
+flask
+opencv-python
+uuid
