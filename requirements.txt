@@ -5,3 +5,4 @@ tiktoken
 flask
 opencv-python
 uuid
+PyPDF2

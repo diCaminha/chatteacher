@@ -7,31 +7,34 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-   <header class="cabecalho container">
-        <img src="{{ url_for('static', filename='img/logo-chatbot.svg') }}" alt="Logo Chatbot">
-        <div class="cabecalho__acoes">
-            
+<header class="cabecalho container">
+    <div class="cabecalho__acoes">
+    </div>
+</header>
+<main class="main">
+    <section class="chat container" id="chat">
+        <p class="chat__bolha chat__bolha--bot">
+            Olá! Eu sou o assistente de edital ~<br/><br/>
+            Como posso te ajudar? Faça o upload do edital e pergunte-me o que quiser sobre.
+        </p>
+    </section>
+    <section class="entrada container">
+        <div class="entrada__container">
+            <button id="mais_arquivo" aria-label="Botão de mais opções">
+                <i class="icone icone--mais-opcoes"></i>
+            </button>
+            <!-- Add a placeholder for file status -->
+            <span id="file-status" class="file-status"></span>
+            <input type="text" class="entrada__input" placeholder="Enviar uma mensagem" id="input">
+            <button aria-label="Botão de enviar" id="botao-enviar">
+                <img class="icone icone--enviar-mensagem"></img>
+            </button>
         </div>
-   </header> 
-   <main class="main">
-        <section class="chat container" id="chat">
-            <p class="chat__bolha chat__bolha--bot">
-                Olá! Eu sou o assistente virtual da EcoMart ~<br/><br/>
-                Como posso te ajudar?
-            </p>
-        </section>
-        <section class="entrada container">
-            <div class="entrada__container">
-                <button id="mais_arquivo" aria-label="Botão de mais opções">
-                    <i class="icone icone--mais-opcoes"></i>
-                </button>
-                <input type="text" class="entrada__input" placeholder="Enviar uma mensagem" id="input">
-                <button aria-label="Botão de enviar" id="botao-enviar">
-                    <img class="icone icone--enviar-mensagem"></>
-                </button>
-            </div>
-        </section>
-   </main>
+    </section>
+
+    <!-- Hidden file input -->
+    <input type="file" id="fileInput" style="display: none;"/>
+</main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>

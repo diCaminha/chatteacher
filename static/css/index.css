@@ -199,3 +199,9 @@ body {
 .icone--enviar-mensagem {
     background-image: url(../img/icone-enviar.svg);
 }
+
+.file-status {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #444;
+}
